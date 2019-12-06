@@ -1,5 +1,7 @@
 # TrueLayer Identity Package
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/f015242ebfd342c493dff8d919f42dcb)](https://www.codacy.com/manual/signalfire/truelayer-identity?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=signalfire/truelayer-identity&amp;utm_campaign=Badge_Grade)
+
 Allows retrieving identity and address information from banks via FinTech API provided by [TrueLayer](https://truelayer.com/)
 
 ## Generate AuthLink
