@@ -47,7 +47,7 @@ $request = new Signalfire\TrueIdentity\Request([
 $auth = new Signalfire\TrueIdentity\Auth($request, $credentials);
 ```
 
-4.  Call getAccessToken($code, $redirect). You will need to pass the $code posted value just obtained and the $redirect param matching the $redirectUri used when creating the auth link earlier. An array containing an access_token as a child of the body parent will be returned.
+4.  Call getAccessToken($code, $redirect). Passing the $code value just obtained and the $redirect param matching the $redirectUri used when creating the auth link earlier. 
 
 5.  Create a new instance of the request class.
 
