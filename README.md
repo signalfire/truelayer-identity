@@ -31,7 +31,6 @@ header('location: ....');
 ## Code Exchange Callback Redirect URI
 
 1.  Posted back to the callback redirectUri you provided will a POST payload with a ```code``` param. Other params will include state, scope and error. You should check state matches that passed and there is no error message.
-
 2.  Create a instance of the request class.
 
 ```php
