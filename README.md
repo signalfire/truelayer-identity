@@ -6,25 +6,27 @@ Allows retrieving identity and address information from banks via FinTech API pr
 
 1. Create an instance of the credentials class passing in the clientId and clientSecret from TrueLayer
 
-```
+```php
 $credentials = new Signalfire\TrueIdentity\Credentials($clientId, $clientSecret);
 ```
 
 2. Create an instance of AuthLink class passing in $credentials (as above), $redirectUri to send to after authentication, $state opaque value, $enableMock to enable or disable mock bank (and therefore sandbox).
 
-```
+```php
 $link = new Signalfire\TrueIdentity\AuthLink($credentials, $redirectUri, $state, $enableMock);
 ```
 
 3. Generate the auth link URI
 
-```
+```php
 $uri = $link->getAuthLinkUri();
 ```
 
 4. Redirect the user to this address
 
-```header('location: ....');```
+```php
+header('location: ....');
+```
 
 ## Code Exchange Callback Redirect URI
 
@@ -32,7 +34,7 @@ $uri = $link->getAuthLinkUri();
 
 2. Create a instance of the request class.
 
-```
+```php
 $request = new Signalfire\TrueIdentity\Request([
   'base_uri' => 'https://auth.truelayer-sandbox.com',
   'timeout'  => 60,
@@ -41,7 +43,7 @@ $request = new Signalfire\TrueIdentity\Request([
 
 3. Create an instance of the auth class passing the $request. You will also need a $credentials instance as created earlier.
 
-```
+```php
 $auth = new Signalfire\TrueIdentity\Auth($request, $credentials);
 ```
 
@@ -49,7 +51,7 @@ $auth = new Signalfire\TrueIdentity\Auth($request, $credentials);
 
 5. Create a new instance of the request class.
 
-```
+```php
 $request = new Signalfire\TrueIdentity\Request([
   'base_uri' => 'https://api.truelayer-sandbox.com',
   'timeout'  => 60,
@@ -58,19 +60,19 @@ $request = new Signalfire\TrueIdentity\Request([
 
 6. Create an instance of the Info class, passing in the new $request and earlier obtained access_token $token arguments
 
-```
+```php
 $info = new Signalfire\TrueIdentity\Info($request, $token);
 ```
 
 7. Call the getInfo() method on $info
 
-```
+```php
 $info->getInfo();
 ```
 
 8. User information will be returned in an array similar to that below...
 
-```
+```php
 Array
 (
     [statusCode] => 200
