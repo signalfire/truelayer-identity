@@ -49,6 +49,16 @@ $auth = new Signalfire\TrueIdentity\Auth($request, $credentials);
 
 4.  Call getAccessToken($code, $redirect). Passing the $code value just obtained and the $redirect param matching the $redirectUri used when creating the auth link earlier. 
 
+```php
+[
+  [statusCode] => 200
+  [reason] => 'OK'
+  [body] => [
+    [access_token] => '...',
+  ]
+]
+```
+
 5.  Create a new instance of the request class.
 
 ```php
