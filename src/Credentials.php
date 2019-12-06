@@ -17,7 +17,6 @@ class Credentials
 {
     private $clientId;
     private $clientSecret;
-    private $code;
 
     /**
      * Constructor
